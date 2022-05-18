@@ -1,7 +1,11 @@
 package com.example.ivanov_practika;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.os.AsyncTask;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.os.Bundle;
@@ -14,7 +18,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import android.util.JsonReader;
+import android.widget.BaseAdapter;
 import java.util.ArrayList;
+import android.widget.ListView;
+import java.util.List;
 
 
 public class theatre extends AppCompatActivity {
@@ -133,6 +140,12 @@ public class theatre extends AppCompatActivity {
         @Override
         protected void onPostExecute(ArrayList<String[]> result) {
             super.onPostExecute(result);
+            theatre.ClAdapter clAdapter=new
+                    theatre.ClAdapter(tvInfo.getContext(),result);
+            ListView lvMain = (ListView) findViewById(R.id.lvMain);
+            lvMain.setAdapter(clAdapter);
+            tvInfo.setText("End");
+
         }
     }
 
@@ -142,7 +155,41 @@ public class theatre extends AppCompatActivity {
     }
 
 
-
+    class ClAdapter extends BaseAdapter{
+        Context ctx;
+        LayoutInflater lInflater;
+        List<String[]> lines;
+        ClAdapter(Context context, List<String[]> elines){
+            ctx = context;
+            lines = elines;
+            lInflater = (LayoutInflater) ctx
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        }
+        @Override
+        public int getCount() {
+            return lines.size();
+        }
+        @Override
+        public Object getItem(int position) {
+            return lines.get(position);
+        }
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent)
+        {
+            View view = convertView;
+            if (view == null) {
+                view = lInflater.inflate(R.layout.item, parent, false);
+            };
+            String[] p =(String[]) getItem(position);
+            ((TextView) view.findViewById(R.id.tvText)).setText(p[0]);
+            ((TextView) view.findViewById(R.id.tvText1)).setText(p[1]);
+            return view;
+        };
+    }
 }
 
 
