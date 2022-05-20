@@ -49,7 +49,7 @@ public class theatre extends AppCompatActivity {
             HttpURLConnection myConnection = null;
             try {
                 URL mySite = new
-                        URL("http://10.0.2.2:8080/json?id=1&name="+params[0]);
+                        URL("http://10.0.2.2:8080/kino?id=1&Name="+params[0]);
                 myConnection =
                         (HttpURLConnection) mySite.openConnection();
             } catch (MalformedURLException e) {
