@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Ivanov_Practika"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".newtheatre"
+            android:exported="false" />
+        <activity
+            android:name=".newfilm"
+            android:exported="false" />
+        <activity
+            android:name=".films"
+            android:exported="false" />
+        <activity
             android:name=".theatre"
             android:exported="false">
             <meta-data

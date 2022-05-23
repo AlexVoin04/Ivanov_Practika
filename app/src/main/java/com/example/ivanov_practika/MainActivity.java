@@ -29,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
         {
             case R.id.m1: intent = new Intent(this, theatre.class);
                 break;
+            case R.id.m2: intent = new Intent(this, films.class);
+                break;
+            case R.id.m3: intent = new Intent(this, newtheatre.class);
+                break;
+            case R.id.m4: intent = new Intent(this, newfilm.class);
+                break;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
