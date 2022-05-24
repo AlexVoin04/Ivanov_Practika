@@ -55,7 +55,7 @@ public class newtheatre extends AppCompatActivity {
             }
             myConnection.setDoOutput(true);
             try {
-                myConnection.getOutputStream().write( ("id=1&name=" + params[0]+"&address="+params[1]).getBytes());
+                myConnection.getOutputStream().write( ("id=1&Name=" + params[0]+"&Address="+params[1]).getBytes());
             } catch (IOException e) {
                 e.printStackTrace();
             };
