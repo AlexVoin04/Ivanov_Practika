@@ -8,6 +8,7 @@
         android:id="@+id/editTextTextPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Введите название или адресс фильма"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="" />
@@ -15,13 +16,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
         android:onClick="onclick"
-        android:text="@string/start">
+        android:text="@string/search1">
     </Button>
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </ProgressBar>
     <TextView
         android:id="@+id/tvInfo"
         android:layout_width="wrap_content"

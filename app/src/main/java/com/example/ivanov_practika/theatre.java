@@ -144,7 +144,7 @@ public class theatre extends AppCompatActivity {
                     theatre.ClAdapter(tvInfo.getContext(),result);
             ListView lvMain = (ListView) findViewById(R.id.lvMain);
             lvMain.setAdapter(clAdapter);
-            tvInfo.setText("End");
+            tvInfo.setText("Поиск завершен");
 
         }
     }

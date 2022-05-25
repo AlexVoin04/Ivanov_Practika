@@ -187,7 +187,7 @@ public class newfilm extends AppCompatActivity {
                     mttf.execute(st[1],result);
                 };
             }
-            tvInfo.setText("End");
+            tvInfo.setText("Фильм успешно добавлен");
         }
     }
     class MyTask extends AsyncTask<Void, Void, ArrayList<String[]> >{
@@ -305,7 +305,7 @@ public class newfilm extends AppCompatActivity {
             newfilm.ClAdapter clAdapter=new newfilm.ClAdapter(tvInfo.getContext(),result);
 //            lvMain = (ListView) findViewById(R.id.lvMain);
             lvMain.setAdapter(clAdapter);
-            tvInfo.setText("End");
+            tvInfo.setText("Кинотеатры для показа добавленного фильма:");
         }
 
     }

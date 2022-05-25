@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Ivanov_Practika</string>
     <string name="start">Start</string>
+    <string name="search1">Поиск фильма</string>
+    <string name="search2">Поиск кинотеатра</string>
+    <string name="create1">Добавить фильм</string>
+    <string name="create2">Добавить кинотеатр</string>
 </resources>

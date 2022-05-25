@@ -73,7 +73,7 @@ public class newtheatre extends AppCompatActivity {
         }
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            tvInfo.setText("End");
+            tvInfo.setText("Кинотеатр успешно добавлен");
         }
     }
 
