@@ -7,5 +7,13 @@
     tools:context=".MainActivity">
 
 
-
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="411dp"
+        android:layout_height="732dp"
+        android:background="#396886"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/__jpg" />
 </androidx.constraintlayout.widget.ConstraintLayout>
